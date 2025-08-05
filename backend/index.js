@@ -16,9 +16,9 @@ const PORT = process.env.PORT || 5000;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
-const corsOption={
-    origin:'*',
-    credentials:false
+const corsOption = {
+  origin: ['http://localhost:3000', 'https://chatx-gamma.vercel.app'],
+  credentials: true // Set true if you plan to use cookies or auth headers
 };
 app.use(cors(corsOption)); 
 
